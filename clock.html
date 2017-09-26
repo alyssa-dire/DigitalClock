@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Digital Clock</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+		<div id="clock"></div>
+		
+		<script type ="text/javascript">
+			function currentTime() {
+				var date = new Date(); //defined object in JS 
+				var hours = date.getHours();
+				var mins = date.getMinutes();
+				var secs = date.getSeconds();
+				var ampm = "PM";
+				
+				//set 12 hour clock and AM/PM
+				if(hours > 12){
+					hours = hours - 12;
+					ampm = "AM";
+				}
+				
+				//if single digit number, have 0 appear in front for hours, mins, and secs
+				if(hours < 10){
+					hours = "0" + hours;
+				}
+				if(mins < 10){
+					mins = "0" + mins;
+				}
+				if(secs < 10){
+					secs = "0" + secs;
+				}
+			
+		                
+				var time = "New York: " + hours + ":" + mins + ":" + secs + " " + ampm;
+				document.getElementById("clock").innerText = time; 
+				
+			}
+			
+			currentTime(); //calls function to display current time
+			setInterval(currentTime, 1000); //calls function continuously - giving ticking clock 
+	
+		</script>
+	</body>
+
+</html>
