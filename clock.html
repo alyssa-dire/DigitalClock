@@ -15,12 +15,12 @@
 				var hours = date.getHours();
 				var mins = date.getMinutes();
 				var secs = date.getSeconds();
-				var ampm = "PM";
+				var ampm = "AM";
 				
 				//set 12 hour clock and AM/PM
 				if(hours > 12){
 					hours = hours - 12;
-					ampm = "AM";
+					ampm = "PM";
 				}
 				
 				//if single digit number, have 0 appear in front for hours, mins, and secs
