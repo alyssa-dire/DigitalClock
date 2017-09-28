@@ -1,3 +1,4 @@
 # DigitalClock
-Digital clock program that shows in real time
+Digital clock program that updates in real time
+
 Uses HTML, JavaScript, and CSS
